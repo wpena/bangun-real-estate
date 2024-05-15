@@ -14,7 +14,7 @@
 body {
     background-color: #121010;
     color: var(--main-color);
-    padding: 2.5rem 4.7rem;
+    padding: 2.5rem 4.5rem;
 }
 
 h1, .hero-title_span {
@@ -28,6 +28,7 @@ a {
     text-decoration: none;
 }
 
+/* Navigation */
 .header {
     display: flex;
     justify-content: space-between;
@@ -58,8 +59,8 @@ button {
     cursor: pointer;
 }
 
-.hero-section {
-    margin: 6.25rem 0;
+.hero-section, .benefits-section {
+    padding: 6.25rem 0;
 }
 
 .hero-header {
@@ -100,4 +101,58 @@ button {
 .hero-grid > img:last-child {
     border-top-right-radius: 4rem;
     border-bottom-right-radius: 4rem;
+}
+
+/* Brand Logo Section */
+.brand-section {
+    padding: 0 1.875rem;
+}
+
+.brand-grid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.benefits-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.benefits-cards > .card {
+    flex: 1 1 30%;
+}
+
+.card {
+    width: 700px;
+}
+
+.icon-wrapper {
+    display: flex;
+    width: 4.38rem;
+    height: 4.38rem;
+    justify-content: center;
+    align-items: center;
+    background: #E9E7DA;
+    border: 2px solid;
+    border-radius: 1rem;
+}
+
+.card-hover:hover .icon-wrapper {
+    background-color: #121010;
+    border: 2px solid #E9E7DA;
+    transition: 0.3s ease;
+}
+
+.card-hover:hover .icon-hover {
+    stroke: #fff;
+    transition: 0.3s ease;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1440px ) {
+    .hero-grid {
+        grid-auto-rows: 25rem;
+    }
 }
